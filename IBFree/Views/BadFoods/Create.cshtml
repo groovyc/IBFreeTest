@@ -1,0 +1,84 @@
+﻿@model IBFree.Models.BadFoods
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Enter the name of a food</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>BadFoods</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NameId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NameId)
+                @Html.ValidationMessageFor(model => model.NameId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fructan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fructan)
+                @Html.ValidationMessageFor(model => model.Fructan)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sorbitol, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Sorbitol)
+                @Html.ValidationMessageFor(model => model.Sorbitol)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mannitol, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mannitol)
+                @Html.ValidationMessageFor(model => model.Mannitol)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fructose, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fructose)
+                @Html.ValidationMessageFor(model => model.Fructose)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GOS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GOS)
+                @Html.ValidationMessageFor(model => model.GOS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lactose, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Lactose)
+                @Html.ValidationMessageFor(model => model.Lactose)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

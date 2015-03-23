@@ -1,0 +1,19 @@
+﻿@model IEnumerable<IBFree.Models.BadFoods>
+@{
+    ViewBag.Title = "RetrieveAll";
+}
+
+
+<h2>RetrieveAll</h2>
+<h3>
+    Where is everything?
+</h3>
+    @foreach (var item in Model)
+{
+    <h4>
+        Hello whats the craic :
+        @item.NameId  @item.NameId
+
+    </h4>
+}
+<h5>I'm going home</h5>
